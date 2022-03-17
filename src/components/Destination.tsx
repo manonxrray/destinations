@@ -14,7 +14,7 @@ import {
   Divider
 } from '@mui/material';
 
-import DestinationType from './types/Destination';
+import DestinationType from '../types/Destination';
 
 type DestinationProps = {
   destination: DestinationType
@@ -27,7 +27,7 @@ const CardContainer = styled.div`
 const Destination = ({ destination }: DestinationProps): JSX.Element => {
   return (
     <CardContainer>
-      <Card sx={{ maxWidth: 600 }}>
+      <Card sx={{ maxWidth: 400 }}>
         <CardMedia
           component="img"
           height="150"
@@ -47,7 +47,7 @@ const Destination = ({ destination }: DestinationProps): JSX.Element => {
         </CardContent>
         <Divider />
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 500 }} aria-label="simple table">
+          <Table sx={{ minWidth: 350 }} aria-label="simple table">
             <TableRow>
               <TableCell align="center">{destination.citizens}</TableCell>
               <TableCell align="center">{destination.hotels}</TableCell>
