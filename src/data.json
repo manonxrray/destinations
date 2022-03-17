@@ -1,0 +1,56 @@
+[
+  {
+    "city": "Copenaghen",
+    "address": "Rådhuspladsen 1, 1550 København, Denmark",
+    "citizens": 3.4,
+    "hotels": 5000,
+    "income": 70000,
+    "area": 88.25,
+    "image": "copenaghen.png"
+  },
+  {
+    "city": "Tehran",
+    "address": "Tehran, Azadi Square, Iran",
+    "citizens": 8.6,
+    "hotels": 400,
+    "income": 30000,
+    "area": 730,
+    "image": "tehran.png"
+  },
+  {
+    "city": "Paris",
+    "address": "Pl. de l'Hôtel de Ville, 75004 Paris",
+    "citizens": 2.1,
+    "hotels": 7500,
+    "income": 50000,
+    "area": 105.4,
+    "image": "paris.png"
+  },
+  {
+    "city": "London",
+    "address": "London SW1A 0AA, United Kingdom",
+    "citizens": 8.98,
+    "hotels": 10000,
+    "income": 90000,
+    "area": 1572,
+    "image": "london.png"
+  },
+  {
+    "city": "Tokyo",
+    "address": "4 Chome-2-8 Shibakoen, Minato City, Tokyo 105-0011, Japan",
+    "citizens": 13.9,
+    "hotels": 7000,
+    "income": 70000,
+    "area": 627.6,
+    "image": "tokyo.png"
+  },
+  {
+    "city": "New York",
+    "address": "New York, NY 10004, United States",
+    "citizens": 8.4,
+    "hotels": 12000,
+    "income": 100000,
+    "area": 783.8,
+    "image": "newyork.png"
+  }
+]
