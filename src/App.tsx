@@ -21,6 +21,8 @@ const Header = styled.header`
   margin: 2rem
 `;
 
+const DestinationContext = React.createContext(data);
+
 const App = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -44,9 +46,11 @@ const App = () => {
       </Header>
      
       <Cards>
-        {data.map((destination: DestinationType) => (
-          <Destination destination={destination} />
-        ))}
+        <DestinationContext.Provider value={data}>
+          {data.map((destination: DestinationType) => (
+              <Destination destination={destination} />
+          ))}
+        </DestinationContext.Provider>
       </Cards>
     </div>
   );

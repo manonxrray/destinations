@@ -31,7 +31,7 @@ const Destination = ({ destination }: DestinationProps): JSX.Element => {
         <CardMedia
           component="img"
           height="150"
-          image={"/assets/" + destination.image}
+          image={destination.image}
           alt={destination.city}
         />
         <CardContent sx={{ display: 'flex', justifyContent: 'space-between' }}>

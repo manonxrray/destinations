@@ -6,7 +6,7 @@
     "hotels": 5000,
     "income": 70000,
     "area": 88.25,
-    "image": "copenaghen.png"
+    "image": "https://www.lasciativiaggiare.it/blog/wp-content/uploads/2021/01/Copenaghen-1024x576.jpg"
   },
   {
     "city": "Tehran",
@@ -15,7 +15,7 @@
     "hotels": 400,
     "income": 30000,
     "area": 730,
-    "image": "tehran.png"
+    "image": "https://chaparpersiantravel.com/wp-content/uploads/2020/02/Azadi-Tower-Tehran.jpg"
   },
   {
     "city": "Paris",
@@ -24,7 +24,7 @@
     "hotels": 7500,
     "income": 50000,
     "area": 105.4,
-    "image": "paris.png"
+    "image": "https://www.parisinfo.com/var/otcp/sites/images/media/1.-photos/02.-sites-culturels-630-x-405/hotel-de-ville-patinoire-nuit-630x405-c-otcp-david-lefranc-i-131-39/23511-1-fre-FR/Hotel-de-ville-patinoire-nuit-630x405-C-OTCP-David-Lefranc-I-131-39.jpg"
   },
   {
     "city": "London",
@@ -33,7 +33,7 @@
     "hotels": 10000,
     "income": 90000,
     "area": 1572,
-    "image": "london.png"
+    "image": "https://a.cdn-hotels.com/gdcs/production172/d905/7e52fb4f-dbfd-4f2b-b095-35cff971bb75.jpg"
   },
   {
     "city": "Tokyo",
@@ -42,7 +42,7 @@
     "hotels": 7000,
     "income": 70000,
     "area": 627.6,
-    "image": "tokyo.png"
+    "image": "https://lepetitjournal.com/sites/default/files/styles/main_article/public/2020-05/coronavirus-japon-tokyo-fin-etat-urgence.jpg?itok=freE7tuH"
   },
   {
     "city": "New York",
@@ -51,6 +51,6 @@
     "hotels": 12000,
     "income": 100000,
     "area": 783.8,
-    "image": "newyork.png"
+    "image": "https://a.cdn-hotels.com/gdcs/production148/d757/6059b2a0-8f10-11e8-a0da-0242ac11004d.jpg"
   }
 ]

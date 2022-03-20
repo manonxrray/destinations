@@ -9,9 +9,11 @@ import {
 } from '@mui/material';
 import styled from '@emotion/styled';
 
+import { useDestination } from '../context/destination-provider';
+
 type ModalProps = {
   close: Function;
-  open: boolean
+  open: boolean;
 };
 
 const ModalContent = styled.div`
@@ -35,6 +37,24 @@ const FormFooter = styled.div`
 `;
 
 const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
+  const state = {
+    city: '',
+    address: '',
+    image: '',
+    citizens: 0,
+    hotels: 0,
+    income: 0,
+    area: 0
+  };
+
+  const { setDestination } = useDestination();
+
+  const handleSubmit = () => {
+    setDestination(state);
+    console.log(state);
+    close();
+  };
+
   return (
     <Modal
       open={open}
@@ -45,13 +65,14 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
           Ajouter une nouvelle destination
         </Typography>
 
-        <Form>
+        <Form onSubmit={() => handleSubmit}>
           <TextField
             required
             id="filled-required"
             label="Nom de la destination"
             type="string"
             variant="filled"
+            onChange={(e => state.city = e.target.value)} 
           />
           <TextField
             required
@@ -59,6 +80,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
             label="Adresse"
             type="string"
             variant="filled"
+            onChange={(e => state.address = e.target.value)} 
           />
           <TextField
             required
@@ -66,6 +88,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
             label="Lien de l'image"
             type="string"
             variant="filled"
+            onChange={(e => state.image = e.target.value)} 
           />
           <FormFooter>
             <TextField
@@ -74,6 +97,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
               label="Nb Habitants"
               type="number"
               variant="filled"
+              onChange={(e => state.citizens = parseInt(e.target.value))} 
             />
             <TextField
               required
@@ -81,6 +105,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
               label="Nb Hôtels"
               type="number"
               variant="filled"
+              onChange={(e => state.hotels = parseInt(e.target.value))} 
             />
             <TextField
               required
@@ -88,6 +113,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
               label="Revenu Moy"
               type="number"
               variant="filled"
+              onChange={(e => state.income = parseInt(e.target.value))} 
               InputProps={{
                 endAdornment: <InputAdornment position="end">€</InputAdornment>,
               }}
@@ -98,6 +124,7 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
               label="Superficie"
               type="number"
               variant="filled"
+              onChange={(e => state.area = parseInt(e.target.value))} 
               InputProps={{
                 endAdornment: <InputAdornment position="end">km²</InputAdornment>,
               }}
@@ -105,8 +132,14 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
           </FormFooter>
           <FormControlLabel control={<Switch defaultChecked />} label="Activer" />
           <div>
-            <Button variant="outlined">Cancel</Button>
-            <Button variant="contained">Confirm</Button>
+            <Button
+              type="button"
+              variant="outlined"
+              onClick={() => close()}
+            >
+              Cancel
+            </Button>
+            <Button type="submit" variant="contained">Confirm</Button>
           </div>
         </Form>
       </ModalContent>
