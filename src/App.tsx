@@ -35,6 +35,7 @@ const App = () => {
           Destinations
         </Typography>
         <Button
+          id='add-modal'
           onClick={handleOpen}
           sx={{ color: '#fff', background: '#39e185'}}
         >
@@ -46,9 +47,14 @@ const App = () => {
       </Header>
      
       <Cards>
+        {/*
+          Mapping through my json data
+          - I'm having trouble displaying the new destinations added by the user
+          - I'm actually out of ideas to display the local storage content 
+         */}
         <DestinationContext.Provider value={data}>
           {data.map((destination: DestinationType) => (
-              <Destination destination={destination} />
+              <Destination key={destination.city} destination={destination} />
           ))}
         </DestinationContext.Provider>
       </Cards>

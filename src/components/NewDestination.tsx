@@ -37,6 +37,7 @@ const FormFooter = styled.div`
 `;
 
 const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
+  // This is the new destination state I'm going to store in the local storage...
   const state = {
     city: '',
     address: '',
@@ -47,10 +48,15 @@ const NewDestination = ({ close, open }: ModalProps): JSX.Element => {
     area: 0
   };
 
+  // ...using this custom hook (src/context/destination-provider)
   const { setDestination } = useDestination();
 
   const handleSubmit = () => {
     setDestination(state);
+    /* 
+      It looks like my submit doesn't work because the two following actions
+      are not happening
+    */
     console.log(state);
     close();
   };
